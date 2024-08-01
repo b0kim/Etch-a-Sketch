@@ -2,6 +2,8 @@
     --bg-grad-1: brown;
     --bg-grad-2: brown;
     --board-color: red;
+    --screen-color: gray;
+    --header-text: #d1a62f;
 }
 
 * {
@@ -13,5 +15,35 @@
 body {
     min-height: 100vh;
     font-family: sans-serif;
+    background-color: var(--bg-grad-1);
 }
 
+.container {
+    max-width: 750px;
+    margin: 10rem auto;
+    background-color: var(--board-color);
+    border-radius: 8px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 5rem;
+    color: var(--header-text);
+}
+
+.screen {
+    height: 25rem;
+    margin: 0 3rem;
+    background-color: var(--screen-color);
+}
+
+.control_panel {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 8rem;
+
+}
