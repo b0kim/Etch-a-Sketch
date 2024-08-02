@@ -121,7 +121,8 @@ body {
     justify-content: center;
     align-items: center;
     background: var(--bg-shadow);
-    /* opacity: 0; */
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out;
     pointer-events: none;
 }
 
@@ -135,6 +136,15 @@ body {
     border-radius: 10px;
     box-shadow: inset 0 -3px 6px rgba(0,0,0,0.6);   
 }
+
+/* 
+Next steps:
+- add input form / slider to adjust grid dimensions
+- add event listener to transition popup
+- add event listener to reset grid
+...
+- work on color/eraser options
+*/
 
 
 /* Controls Styling */
@@ -167,4 +177,9 @@ body {
     width: 7.5rem;
     height: 3.5rem;
     border-radius: 8px;
+}
+
+.show_reset {
+    opacity: 1;
+    pointer-events: initial;
 }

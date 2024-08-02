@@ -35,3 +35,11 @@ function createGrid(rows) {
 function fillSquare (event) {
     event.target.classList.add('black');
 }
+
+// Code for button interactivity
+const btnReset = document.querySelector('button.reset'); 
+const popup = document.querySelector('.popup');
+
+btnReset.addEventListener('click', () => {
+    popup.classList.toggle('show_reset');
+});
