@@ -32,14 +32,50 @@ function createGrid(rows) {
     }
 }
 
-function fillSquare (event) {
-    event.target.classList.add('black');
-}
+// Code for Resets
+const sliderRange = document.querySelector('.slider_range');
+const sliderValue = document.querySelector('.slider_value');
 
-// Code for button interactivity
+sliderRange.addEventListener('input', () => {
+    sliderValue.textContent = sliderRange.value;
+});
+
+// Toggle the reset popup with reset/confirm buttons
 const btnReset = document.querySelector('button.reset'); 
+const btnConfirm = document.querySelector('.btn_confirm');
 const popup = document.querySelector('.popup');
 
 btnReset.addEventListener('click', () => {
     popup.classList.toggle('show_reset');
 });
+
+btnConfirm.addEventListener('click', () => {
+    createGrid(sliderRange.value);
+    popup.classList.toggle('show_reset');
+})
+
+
+// Add color options
+const btnBlack = document.querySelector('.btn_black');
+const btnGray = document.querySelector('.btn_gray');
+const btnRainbow = document.querySelector('.btn_rainbow');
+
+let selectedColor = 'black';
+btnBlack.addEventListener('click', () => {
+    selectedColor = 'black';
+})
+btnGray.addEventListener('click', () => {
+    selectedColor = 'gray';
+})
+
+function fillSquare (event) {
+    event.target.style.backgroundColor = 'selectedColor';
+}
+
+/* 
+Next steps:
+- work on color/eraser options
+- improve slider UI
+- improve drawing experience (less choppy)
+*/
+
