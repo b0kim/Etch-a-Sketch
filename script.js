@@ -77,7 +77,14 @@ btnRainbow.addEventListener('click', () => {
 let selectedColor = 'black'; // Initial color
 
 function fillSquare (event) {
-    event.target.style.backgroundColor = selectedColor;
+    if (selectedColor === 'rainbow') {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        event.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    } else {
+        event.target.style.backgroundColor = selectedColor;
+    }
 }
 
 /* 
