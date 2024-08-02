@@ -69,11 +69,12 @@ body {
 }
 
 /* Screen Styling */
+
 .screen_lip {
     height: 39rem;
     width: 52rem;
     margin: 0 auto;
-    padding: 0.5rem;
+    padding: 0.3rem;
     border-radius: 10px;
     box-shadow: 
     inset 0 0 6px rgba(255, 255, 255, 0.8), /* Inner light shadow */
@@ -87,7 +88,23 @@ body {
     box-shadow: 
         inset 5px 6px 4px rgba(0, 0, 0, 0.6), /*Top and left Shadow*/
         inset -5px 0px 4px rgba(0, 0, 0, 0.6); /*Right Shadow*/
+    padding: 0.63rem 0.63rem 0.2rem;
 }
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 100%;
+    border-radius: 10px;
+}
+
+.square {
+    background-color: var(--screen-color);
+    /* Uncomment to visualize grid */
+    border: 1px solid black; 
+}
+
 
 /* Controls Styling */
 
