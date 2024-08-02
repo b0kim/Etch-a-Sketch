@@ -100,9 +100,12 @@ body {
 }
 
 .square {
-    background-color: var(--screen-color);
     /* Uncomment to visualize grid */
-    border: 1px solid black; 
+    /* border: .1px solid black;  */
+}
+
+.black {
+    background-color: black;
 }
 
 
