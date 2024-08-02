@@ -2,14 +2,16 @@ const grid = document.querySelector('.grid');
 const gridRect = grid.getBoundingClientRect();
 const gridWidth = gridRect.width;
 const gridHeight = gridRect.height;
-const ROWS_INITIAL = 30;
 
+// Keep track of whether the mouse button is down while in the grid
 let isMouseDown = false;
-
 grid.addEventListener('mousedown', () => {isMouseDown = true;});
 grid.addEventListener('mouseup', () => {isMouseDown = false});
 grid.addEventListener('mouseleave', () => {isMouseDown = false});
 
+// Code to create grid
+const ROWS_INITIAL = 30;
+createGrid(ROWS_INITIAL);
 function createGrid(rows) {
     grid.innerHTML = '';
 
@@ -29,8 +31,6 @@ function createGrid(rows) {
         grid.appendChild(gridSquare);
     }
 }
-
-createGrid(ROWS_INITIAL);
 
 function fillSquare (event) {
     event.target.classList.add('black');
