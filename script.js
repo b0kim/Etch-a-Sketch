@@ -59,22 +59,31 @@ btnConfirm.addEventListener('click', () => {
 const btnBlack = document.querySelector('.btn_black');
 const btnGray = document.querySelector('.btn_gray');
 const btnRainbow = document.querySelector('.btn_rainbow');
+const btnErase = document.querySelector('.btn_erase');
 
-let selectedColor = 'black';
 btnBlack.addEventListener('click', () => {
     selectedColor = 'black';
 })
 btnGray.addEventListener('click', () => {
     selectedColor = 'gray';
+}) 
+btnErase.addEventListener('click', () => {
+    selectedColor = 'inherit';
+})
+btnRainbow.addEventListener('click', () => {
+    selectedColor = 'rainbow';
 })
 
+let selectedColor = 'black'; // Initial color
+
 function fillSquare (event) {
-    event.target.style.backgroundColor = 'selectedColor';
+    event.target.style.backgroundColor = selectedColor;
 }
 
 /* 
 Next steps:
 - work on color/eraser options
+- color button click animations
 - improve slider UI
 - improve drawing experience (less choppy)
 */
